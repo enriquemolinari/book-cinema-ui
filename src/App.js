@@ -1,22 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import Menu from "./Menu";
+import Home from "./Home";
+import Footer from "./Footer";
 
 function App() {
+  const apiHost = process.env.REACT_APP_API_HOST;
+
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">Coding an Arch Style</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <>
+      <Menu />
+      <Home host={apiHost} />
+      {/*       <Footer /> */}
+    </>
   );
 }
 
