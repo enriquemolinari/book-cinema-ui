@@ -4,8 +4,25 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { PersonCircle } from "react-bootstrap-icons";
 import { Tv } from "react-bootstrap-icons";
+import User from "./User";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function Menu() {
+export default function Menu(props) {
+  const userName = User.current().userName();
+  const navigate = useNavigate();
+
+  function handleLogin(e) {
+    e.preventDefault();
+    navigate("/login");
+  }
+
+  function handleLogout(e) {
+    e.preventDefault();
+    User.current(props.host)
+      .logout()
+      .then(() => navigate("/"));
+  }
+
   return (
     <Navbar variant="light">
       <Container>
@@ -14,13 +31,22 @@ export default function Menu() {
         </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link href="#movies">All Movies</Nav.Link>
+          <Nav.Link href="#theatres">Theatres</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href="#task">
-            <PersonCircle /> Username
-          </Nav.Link>
+          {!userName && (
+            <>
+              <Nav.Link href="#lgin" onClick={handleLogin}>
+                <PersonCircle /> Sign in
+              </Nav.Link>
+            </>
+          )}
+          {userName && (
+            <Nav.Link href="#lgout" onClick={handleLogout}>
+              <PersonCircle /> {userName} (Log out)
+            </Nav.Link>
+          )}
         </Nav>
       </Container>
     </Navbar>
