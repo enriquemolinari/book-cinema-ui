@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import { PersonCircle } from "react-bootstrap-icons";
 import { Tv } from "react-bootstrap-icons";
 import User from "./User";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu(props) {
   const userName = User.current().userName();
@@ -27,7 +27,7 @@ export default function Menu(props) {
     <Navbar variant="light">
       <Container>
         <Navbar.Brand href="#home">
-          <Tv /> Coding an Arch Style
+          <Tv /> Cinema
         </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="#home">Home</Nav.Link>

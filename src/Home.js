@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 export default function Home(props) {
   const [index, setIndex] = useState(0);
@@ -46,14 +48,17 @@ export default function Home(props) {
           >
             {playing.map((p) => (
               <Carousel.Item key={p.id}>
-                <img
-                  className="d-block w-100"
-                  src={"holder.js/800x400?text=" + p.movieName + "&bg=373940"}
-                  alt={p.movieName}
-                />
+                <Link to="/movieDetail">
+                  <img
+                    className="d-block w-100"
+                    src={"holder.js/800x400?text=" + p.movieName + "&bg=373940"}
+                    alt={p.movieName}
+                  />
+                </Link>
                 <Carousel.Caption>
                   <h3>{p.startDayTime}</h3>
                   <p>{p.theaterName}</p>
+                  <Button variant="warning">Buy Tickets</Button>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}

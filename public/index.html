@@ -14,18 +14,151 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- Fonts -->
+    <!-- Font awesome - icon font -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,100,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <!-- Open Sans -->
+    <!--     <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:800italic"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+
+    <!-- Mobile menu -->
+    <link href="%PUBLIC_URL%/css/gozha-nav.css" rel="stylesheet" />
+
+    <link
+      href="%PUBLIC_URL%/css/external/jquery.selectbox.css"
+      rel="stylesheet"
+    />
+    <link
+      href="%PUBLIC_URL%/css/external/idangerous.swiper.css"
+      rel="stylesheet"
+    />
+
+    <!-- Magnific-popup -->
+    <link
+      href="%PUBLIC_URL%/css/external/magnific-popup.css"
+      rel="stylesheet"
+    />
+
+    <link href="%PUBLIC_URL%/css/style.css?v=1" rel="stylesheet" />
+
+    <!-- Slider Revolution CSS Files -->
+    <!--     <link
+      rel="stylesheet"
+      type="text/css"
+      href="%PUBLIC_URL%/revolution/css/settings.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="%PUBLIC_URL%/revolution/css/layers.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="%PUBLIC_URL%/revolution/css/navigation.css"
+    /> -->
+
+    <!-- Custom -->
+
+    <!-- Modernizr -->
+    <script src="%PUBLIC_URL%/js/external/modernizr.custom.js"></script>
+
     <title>Cinema UI - Coding an Architecture Style (remastered) Book</title>
   </head>
   <body>
+    <!-- JavaScript-->
+    <!-- jQuery 3.1.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Migrate -->
+    <script src="%PUBLIC_URL%/js/external/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Bootstrap 3-->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- Slider Revolution core JavaScript files -->
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/jquery.themepunch.tools.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/jquery.themepunch.revolution.min.js"
+    ></script>
+
+    <!-- Slider Revolution extension scripts. -->
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.actions.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.carousel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.kenburn.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.layeranimation.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.migration.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.navigation.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.parallax.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.slideanims.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="%PUBLIC_URL%/revolution/js/extensions/revolution.extension.video.min.js"
+    ></script>
+
+    <!-- Mobile menu -->
+    <script src="%PUBLIC_URL%/js/jquery.mobile.menu.js"></script>
+    <!-- Select -->
+    <script src="%PUBLIC_URL%/js/external/jquery.selectbox-0.2.min.js"></script>
+    <!-- Stars rate -->
+    <script src="%PUBLIC_URL%/js/external/jquery.raty.js"></script>
+
+    <!-- Form element -->
+    <script src="%PUBLIC_URL%/js/external/form-element.js"></script>
+    <!-- Form validation -->
+    <script src="%PUBLIC_URL%/js/form.js"></script>
+
+    <!-- Custom -->
+    <script src="%PUBLIC_URL%/js/custom.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        init_Home();
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
