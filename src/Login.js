@@ -1,26 +1,17 @@
-import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import { Card } from "react-bootstrap";
-import { useEffect, useState } from "react";
-import InputGroup from "react-bootstrap/InputGroup";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import User from "./User";
-import { LockFill, PersonCircle, Tv } from "react-bootstrap-icons";
 
 export default function Login(props) {
   const [loginForm, setLoginForm] = useState({
-    user: "",
-    pass: "",
+    username: "",
+    password: "",
   });
   const [errorResponse, setErrorResponse] = useState({
     msg: "",
     error: false,
   });
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.body.style.backgroundColor = "#e9ecef";
-  }, []);
 
   function handleChange(e) {
     const name = e.target.name;
@@ -32,7 +23,7 @@ export default function Login(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
+    console.log(loginForm);
     new User(props.host)
       .login(loginForm.username, loginForm.password)
       .then((v) => {
@@ -49,53 +40,62 @@ export default function Login(props) {
   }
 
   return (
-    <div className="login">
-      <div className="login-logo">
-        <Tv />
-        <span> </span>
-        <b>Cinema</b>
-      </div>
-      <Card>
-        <Card.Header className="login-msg">
-          Sign in to start your session
-        </Card.Header>
-        <Card.Body>
-          <Form onSubmit={handleSubmit}>
-            <InputGroup className="mb-2">
-              <InputGroup.Text id="basic-addon1">
-                <PersonCircle />
-              </InputGroup.Text>
-              <Form.Control
-                name="username"
-                type="text"
-                placeholder="Username"
-                onChange={handleChange}
-                isInvalid={errorResponse.error}
-              />
-              <Form.Control.Feedback type="invalid">
-                {errorResponse.msg}
-              </Form.Control.Feedback>
-            </InputGroup>
-            <InputGroup className="mb-2">
-              <InputGroup.Text id="basic-addon1">
-                <LockFill />
-              </InputGroup.Text>
-
-              <Form.Control
-                name="password"
-                type="password"
-                onChange={handleChange}
-                placeholder="Password"
-                isInvalid={errorResponse.error}
-              />
-            </InputGroup>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Card.Body>
-      </Card>
-    </div>
+    <>
+      {errorResponse.error && (
+        <>
+          <div className="col-sm-4"></div>
+          <div className="col-sm-4">
+            <div class="alert alert-danger">
+              <span class="icon-warning"></span>
+              {errorResponse.msg}
+              <a
+                class="close"
+                data-dismiss="alert"
+                href="#"
+                aria-hidden="true"
+                onClick={() => setErrorResponse({ error: false })}
+              ></a>
+            </div>
+          </div>
+          <div className="col-sm-4"></div>
+          <p></p>
+        </>
+      )}
+      <form id="login-form" className="login" method="get" noValidate>
+        <p className="login__title">
+          sign in <br />
+          <span className="login-edition">welcome to Cinema</span>
+        </p>
+        <div className="field-wrap">
+          <input
+            type="email"
+            placeholder="Username"
+            name="username"
+            className="login__input"
+            onChange={handleChange}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            className="login__input"
+            onChange={handleChange}
+          />
+        </div>
+        <p></p>
+        <div className="login__control">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="btn btn-md btn--warning btn--wider"
+          >
+            sign in
+          </button>
+          <a href="#" className="login__tracker form__tracker">
+            Forgot password?
+          </a>
+        </div>
+      </form>
+    </>
   );
 }

@@ -3534,6 +3534,28 @@ ul#navigation a:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+.btn--logged {
+  font: 13px 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffd564;
+  position: relative;
+  margin-right: 3px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn--logged:before {
+  content: '';
+  width: 48px;
+  height: 4px;
+  position: absolute;
+  top: 24px;
+  left: 12px;
+}
+
 .btn--sign:before {
   content: '';
   background-image: url(../images/components/wave.svg);
@@ -3545,6 +3567,12 @@ ul#navigation a:hover {
   top: 24px;
   left: 12px;
 }
+
+.btn--logged:hover,
+.btn--logged:focus {
+  color: #b4b1b2;
+}
+
 .btn--sign:hover,
 .btn--sign:focus {
   color: #b4b1b2;
