@@ -4706,7 +4706,7 @@ ul#navigation a:hover {
 }
 .category {
   background-color: #4c4145;
-  padding: 56px 24px 10px;
+  padding: 11px 24px 10px;
   position: relative;
 }
 .category:before {
@@ -6003,7 +6003,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   margin-left: 5px;
   margin-bottom: 23px;
 }
-.time-select .time-select__item {
+.time-select__item {
   position: relative;
   z-index: 10;
   display: inline-block;
@@ -6016,7 +6016,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .time-select .time-select__item:hover {
   background-color: #fe505a;
 }
-.time-select .time-select__item:before {
+.time-select__item:before {
   content: '';
   width: 54px;
   height: 28px;
@@ -6025,7 +6025,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   top: 3px;
   left: 3px;
 }
-.time-select .time-select__item:after {
+.time-select__item:after {
   content: '';
   width: 64px;
   height: 34px;

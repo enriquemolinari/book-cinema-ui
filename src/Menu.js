@@ -13,7 +13,6 @@ export default function Menu(props) {
 
   function handleLogout(e) {
     e.preventDefault();
-    console.log(props.host);
     User.current(props.host)
       .logout()
       .then(() => navigate("/"));
@@ -23,7 +22,7 @@ export default function Menu(props) {
     <header className="header-wrapper">
       <div className="container">
         {/* Logo link*/}
-        <a href="index.html" className="logo">
+        <a href="#index" onClick={() => navigate("/")} className="logo">
           <img alt="logo" src="images/logo.png" />
         </a>
         {/* Main website navigation*/}
@@ -277,12 +276,12 @@ export default function Menu(props) {
               {userName}
             </a>
           )}
-          <a
+          {/*           <a
             href="#"
             className="btn btn-md btn--warning btn--book login-window"
           >
             Book a ticket
-          </a>
+          </a> */}
         </div>
       </div>
     </header>
