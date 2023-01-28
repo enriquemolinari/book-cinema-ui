@@ -3322,8 +3322,8 @@ input[type="button"].btn-block {
   margin-top: 80px;
 }
 .order-container {
-  margin-top: 48px;
-  margin-bottom: 78px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 .coloum-wrapper {
   margin-top: 60px;
@@ -3373,6 +3373,20 @@ ul#navigation a:hover {
   font-size: 21px;
   font-family: 'aleobold', sans-serif;
 }
+.rate-comments {
+  padding-left: 30px;
+  margin-top: 56px;
+  margin-bottom: 27px;
+  font: 20px 'aleobold', sans-serif;
+  color: #4c4145;
+  text-transform: uppercase;
+  background-image: url(../images/components/scarf.png);
+  -webkit-background-size: 15px 6px;
+  background-size: 15px 6px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
 .page-heading {
   padding-left: 30px;
   margin-top: 56px;
@@ -4611,6 +4625,20 @@ ul#navigation a:hover {
 .comment-form {
   margin-bottom: 40px;
 }
+
+.comment-form .rating {
+  /*width: 100%;*/
+  /*min-height: 10px;*/
+  padding: 5px 19px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #dbdee1;
+  font-size: 13px;
+  color: #b4b1b2;
+}
+
 .comment-form .comment-form__text {
   width: 100%;
   min-height: 78px;
@@ -4641,6 +4669,16 @@ ul#navigation a:hover {
 .comment .comment__images {
   float: left;
   margin-right: 18px;
+}
+.comment .comment__author2 {
+  padding-top: 6px;
+  font-size: 14px;
+  margin-bottom: 0;
+  line-height: 20px;
+  font-weight: bold;
+  position: relative;
+  /*padding-left: 0px;*/
+  overflow: hidden;
 }
 .comment .comment__author {
   padding-top: 6px;
@@ -5803,7 +5841,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   transition: 0.4s;
 }
 .booking-pagination--margin {
-  margin-top: 112px;
+  margin-top: 30px;
 }
 .movie .movie__info {
   margin-left: -15px;
@@ -6962,13 +7000,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 .choose-sits {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 35px;
 }
 .choose-sits .choose-sits__info {
   display: inline-block;
   font-size: 13px;
   padding: 10px 20px 0 40px;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 }
 .choose-sits .choose-sits__info .sits-price {
   position: relative;
@@ -7040,7 +7078,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .sits .sits__checked {
   position: relative;
   width: 50px;
-  height: 450px;
+  height: 312px;
   background-color: #4c4145;
   position: absolute;
   top: 0;
@@ -10153,7 +10191,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   .sits-area {
     width: 840px;
     position: relative;
-    left: 50%;
+    left: 30%;
     margin-left: -420px;
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);

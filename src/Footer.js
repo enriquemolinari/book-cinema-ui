@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="col-xs-12 col-md-6">
           <div className="footer-info">
             <p className="heading-special--small">
-              A.Movie
+              Cinema - UI
               <br />
               <span className="title-edition">in the social media</span>
             </p>
@@ -92,9 +92,9 @@ export default function Footer() {
               <a href="#" className="social__variant fa fa-pinterest" />
             </div>
             <div className="clearfix" />
-            <p className="copy">
+            {/*             <p className="copy">
               © A.Movie, 2013. All rights reserved. Done by Olia Gozha
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

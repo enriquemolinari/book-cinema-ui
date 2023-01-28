@@ -23,7 +23,7 @@ export default function Menu(props) {
       <div className="container">
         {/* Logo link*/}
         <a href="#index" onClick={() => navigate("/")} className="logo">
-          <img alt="logo" src="images/logo.png" />
+          <img alt="logo" src="images/logo-e.png" />
         </a>
         {/* Main website navigation*/}
         <nav id="navigation-box">

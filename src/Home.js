@@ -11,6 +11,15 @@ export default function Home(props) {
     shows();
   }, []);
 
+  function handleBuyStep1(e, sid) {
+    e.preventDefault();
+    nav("/buystep1", {
+      state: {
+        showId: sid,
+      },
+    });
+  }
+
   function handleMovieDetail(e, mid) {
     e.preventDefault();
     nav("/movie", {
@@ -64,10 +73,15 @@ export default function Home(props) {
               </p>
               {p.shows.map((s, ind) => (
                 <span className="movie__option">
-                  {s.startDayTime.substring(0, s.startDayTime.length - 5)}
+                  {s.startDayTime.substring(0, s.startDayTime.length - 5) +
+                    " -- " +
+                    s.id}
                   {"  "}
                   <span>
-                    <li className="time-select__item" data-time="10:45">
+                    <li
+                      className="time-select__item"
+                      onClick={(e) => handleBuyStep1(e, s.id)}
+                    >
                       {s.startDayTime.substring(s.startDayTime.length - 5)}
                     </li>
                     <br />

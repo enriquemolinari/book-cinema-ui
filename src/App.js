@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar";
 import Menu from "./Menu";
 import Footer from "./Footer";
 import FullMovie from "./FullMovie";
+import ChooseSit from "./ChooseSit";
 
 function App() {
   const apiHost = process.env.REACT_APP_API_HOST;
@@ -44,6 +45,16 @@ function App() {
                 <Menu host={apiHost} />
                 <SearchBar />
                 <FullMovie staticUri={staticUri} host={apiHost} />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path={"/buystep1"}
+            element={
+              <>
+                <Menu host={apiHost} />
+                <ChooseSit host={apiHost} />
                 <Footer />
               </>
             }
