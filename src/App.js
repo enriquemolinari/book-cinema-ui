@@ -7,6 +7,8 @@ import Menu from "./Menu";
 import Footer from "./Footer";
 import FullMovie from "./FullMovie";
 import ChooseSit from "./ChooseSit";
+import Pay from "./Pay";
+import PaySuccess from "./PaySuccess";
 
 function App() {
   const apiHost = process.env.REACT_APP_API_HOST;
@@ -55,6 +57,27 @@ function App() {
               <>
                 <Menu host={apiHost} />
                 <ChooseSit host={apiHost} />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path={"/buystep2"}
+            element={
+              <>
+                <Menu host={apiHost} />
+                <Pay host={apiHost} />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path={"/paysuccess"}
+            element={
+              <>
+                <Menu host={apiHost} />
+                <SearchBar />
+                <PaySuccess host={apiHost} />
                 <Footer />
               </>
             }

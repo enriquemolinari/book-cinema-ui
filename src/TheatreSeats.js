@@ -3,7 +3,10 @@ import React, { useState } from "react";
 export default function TheatreSeats(props) {
   const [chosen, setChosen] = useState([]);
 
-  function handleChosen(e, id, number) {
+  function handleChosen(e, id, number, isAvailable) {
+    if (!isAvailable) {
+      return;
+    }
     if (chosen.includes(id)) {
       let arr = chosen;
       const index = arr.indexOf(id);
@@ -31,7 +34,7 @@ export default function TheatreSeats(props) {
               : "sits__place " + available
           }
           data-place={s.id}
-          onClick={(e, id, number) => handleChosen(e, s.id, s.seatNumber)}
+          onClick={(e) => handleChosen(e, s.id, s.seatNumber, s.available)}
         >
           {s.seatNumber}
         </span>

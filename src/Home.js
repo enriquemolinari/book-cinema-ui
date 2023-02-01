@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import User from "./User";
 
 export default function Home(props) {
+  const userName = User.current().userName();
   const [playing, setPlaying] = useState([]);
   const nav = useNavigate();
 
@@ -13,6 +15,10 @@ export default function Home(props) {
 
   function handleBuyStep1(e, sid) {
     e.preventDefault();
+    if (!userName) {
+      nav("/login");
+      return;
+    }
     nav("/buystep1", {
       state: {
         showId: sid,
@@ -73,9 +79,7 @@ export default function Home(props) {
               </p>
               {p.shows.map((s, ind) => (
                 <span className="movie__option">
-                  {s.startDayTime.substring(0, s.startDayTime.length - 5) +
-                    " -- " +
-                    s.id}
+                  {s.startDayTime.substring(0, s.startDayTime.length - 5)}
                   {"  "}
                   <span>
                     <li

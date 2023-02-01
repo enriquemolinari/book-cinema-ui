@@ -3389,8 +3389,8 @@ ul#navigation a:hover {
 
 .page-heading {
   padding-left: 30px;
-  margin-top: 56px;
-  margin-bottom: 27px;
+  margin-top: 20px;
+  margin-bottom: 32px;
   font: 20px 'aleobold', sans-serif;
   color: #4c4145;
   text-transform: uppercase;
@@ -3422,8 +3422,8 @@ ul#navigation a:hover {
 }
 .checkout-wrapper {
   border-bottom: 1px solid #dbdee1;
-  margin-bottom: 60px;
-  padding-bottom: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 .lower--hight {
   padding-top: 20px;
@@ -5841,7 +5841,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   transition: 0.4s;
 }
 .booking-pagination--margin {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .movie .movie__info {
   margin-left: -15px;
@@ -6696,7 +6696,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 .contact-info .contact-info__field {
   position: relative;
-  width: 360px;
+  width: 340px;
   display: inline-block;
   margin-right: 28px;
 }
@@ -6722,6 +6722,22 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   position: absolute;
   top: 10px;
   left: 15px;
+}
+
+
+.contact-info .contact-info__field-cccode:after {
+  content: "\f00c";
+  left: 13px;
+}
+
+
+.contact-info .contact-info__field-name:after {
+  content: "\f007";
+  left: 13px;
+}
+.contact-info .contact-info__field-card:after {
+  content: "\f09d";
+  left: 13px;
 }
 .contact-info .contact-info__field-mail:after {
   content: "\f0e0";

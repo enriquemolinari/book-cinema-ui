@@ -9,8 +9,8 @@ export default function RatingStars(props) {
     for (let i = 0; i < parseInt(props.value); i++) {
       ra[i] = "on";
     }
-    setRating(ra);
-  });
+    setRating([...ra]);
+  }, [props.random]);
 
   return (
     <span>
