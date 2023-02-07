@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ResponseMessage from "./ResponseMessage";
 import TheatreSeats from "./TheatreSeats";
-import User from "./User";
 import { useNavigate } from "react-router-dom";
 
 export default function ChooseSit(props) {
@@ -46,10 +45,9 @@ export default function ChooseSit(props) {
 
   function handleReservation(e) {
     e.preventDefault();
-    fetch(props.host + "/shows/reserve", {
+    fetch(props.host + "/shows/" + show?.show.id + "/reserve", {
       method: "POST",
       body: JSON.stringify({
-        ids: show?.show.id,
         seats: sitsChosen.map((s) => s.id),
       }),
       headers: {

@@ -61,10 +61,9 @@ export default function Pay(props) {
   function handleConfirm(e) {
     e.preventDefault();
     setProcessing(true);
-    fetch(props.host + "/shows/pay", {
+    fetch(props.host + "/shows/" + show?.show.id + "/pay", {
       method: "POST",
       body: JSON.stringify({
-        ids: show?.show.id,
         seats: seats.map((s) => s.id),
         name: creditCardForm.name,
         number: creditCardForm.number,
