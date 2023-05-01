@@ -9,9 +9,8 @@ export default function UserProfile(props) {
           <img className="avatar" src={props.staticUri + "me-big.jpeg"} />
           <p className="contact__title">
             Enrique Molinari <br />
-            <span class="contact__describe">Points</span>
+            <span class="contact__describe">Points: 10</span>
           </p>
-          <span className="contact__mail">enrique.molinari@gmail.com</span>
           <span className="contact__mail">enrique.molinari@gmail.com</span>
         </div>
       </section>
@@ -28,26 +27,26 @@ export default function UserProfile(props) {
               <p className="form__title">Change Password?</p>
               <div className="col-sm-6">
                 <input
-                  type="text"
-                  placeholder="Your name"
-                  name="user-name"
+                  type="password"
+                  placeholder="Current Password"
+                  name="current_password"
                   className="form__name"
                 />
               </div>
               <div className="col-sm-6">
                 <input
-                  type="email"
-                  placeholder="Your email"
-                  name="user-email"
+                  type="password"
+                  placeholder="New Password"
+                  name="pass1"
                   className="form__mail"
                 />
               </div>
-              <div className="col-sm-12">
-                <textarea
-                  placeholder="Your message"
-                  name="user-message"
-                  className="form__message"
-                  defaultValue={""}
+              <div className="col-sm-6">
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  name="pass2"
+                  className="form__mail"
                 />
               </div>
               <button type="submit" className="btn btn-md btn--danger">

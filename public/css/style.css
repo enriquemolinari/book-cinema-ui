@@ -6633,7 +6633,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   display: inline-block;
   padding: 0 15px 0 42px;
   font-size: 16px;
-  margin-top: 46px;
+  margin-top: 5px;
   position: relative;
 }
 .contact .contact__mail:before {
