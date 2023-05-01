@@ -3572,7 +3572,7 @@ ul#navigation a:hover {
 
 .btn--sign:before {
   content: '';
-  background-image: url(../images/components/wave.svg);
+ /* background-image: url(../images/components/wave.svg);*/
   background-repeat: no-repeat;
   background-size: 48px 4px;
   width: 48px;
@@ -3592,9 +3592,9 @@ ul#navigation a:hover {
   color: #b4b1b2;
 }
 .btn--sign:hover:before,
-.btn--sign:focus:before {
+/*.btn--sign:focus:before {
   background-image: url(../images/components/wave-hover.svg);
-}
+}*/
 .btn--book {
   padding: 7px 17px;
 }
@@ -5156,9 +5156,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   z-index: 21;
 }
 .auth .auth__show {
-  background-color: #4c4145;
+  background-color: #2e292e;
   display: inline-block;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   padding-left: 4px;
   padding-bottom: 13px;
   min-width: 104px;
@@ -5170,7 +5170,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   height: 31px;
 }
 .auth .auth__function {
-  background-color: #4c4145;
+  background-color: #2e292e;
   width: 220px;
   padding: 19px 29px 21px;
   display: none;
@@ -5182,7 +5182,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   -ms-transform-origin: left top;
   transform-origin: left top;
   position: absolute;
-  top: 54px;
+  /*top: 54px;*/
   left: 0;
   z-index: 2;
 }
@@ -5211,16 +5211,16 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 .auth .btn--singin {
   position: absolute;
-  top: 9px;
+  /*top: 9px;*/
   left: 39px;
   padding-right: 20px;
   z-index: 15;
   color: #B4B1B2;
 }
-.auth .btn--singin:before {
+/*.auth .btn--singin:before {
   left: 9px;
   background-image: url(../images/components/wave-hover.svg);
-}
+}*/
 .auth .btn--singin:after {
   content: "\f078";
   color: #B4B1B2;
@@ -5236,9 +5236,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .btn--singin:hover:after {
   color: #ffffff;
 }
-.btn--singin:hover:before {
+/*.btn--singin:hover:before {
   background-image: url(../images/components/wave-light-sm.svg);
-}
+}*/
 .auth__show:hover {
   cursor: pointer;
 }
@@ -5246,9 +5246,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .auth__show:hover + .btn--singin:after {
   color: #ffffff;
 }
-.auth__show:hover + .btn--singin:before {
+/*.auth__show:hover + .btn--singin:before {
   background-image: url(../images/components/wave-light-sm.svg);
-}
+}*/
 .open-function {
   display: block !important;
   -webkit-animation: anime 500ms;

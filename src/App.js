@@ -22,7 +22,7 @@ function App() {
             path={"/"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <Home staticUri={staticUri} host={apiHost} />
                 <Footer />
@@ -33,7 +33,7 @@ function App() {
             path={"/login"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <Login host={apiHost} />
                 <Footer />
@@ -44,7 +44,7 @@ function App() {
             path={"/movie"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <FullMovie staticUri={staticUri} host={apiHost} />
                 <Footer />
@@ -55,7 +55,7 @@ function App() {
             path={"/buystep1"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <ChooseSit host={apiHost} />
                 <Footer />
               </>
@@ -65,7 +65,7 @@ function App() {
             path={"/buystep2"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <Pay host={apiHost} />
                 <Footer />
               </>
@@ -75,7 +75,7 @@ function App() {
             path={"/paysuccess"}
             element={
               <>
-                <Menu host={apiHost} />
+                <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <PaySuccess host={apiHost} />
                 <Footer />
