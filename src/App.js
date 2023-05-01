@@ -9,6 +9,7 @@ import FullMovie from "./FullMovie";
 import ChooseSit from "./ChooseSit";
 import Pay from "./Pay";
 import PaySuccess from "./PaySuccess";
+import UserProfile from "./UserProfile";
 
 function App() {
   const apiHost = process.env.REACT_APP_API_HOST;
@@ -36,6 +37,17 @@ function App() {
                 <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <Login host={apiHost} />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path={"/profile"}
+            element={
+              <>
+                <Menu staticUri={staticUri} host={apiHost} />
+                <SearchBar />
+                <UserProfile staticUri={staticUri} host={apiHost} />
                 <Footer />
               </>
             }
