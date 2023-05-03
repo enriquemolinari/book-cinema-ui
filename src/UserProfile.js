@@ -25,28 +25,32 @@ export default function UserProfile(props) {
               action="send.php"
             >
               <p className="form__title">Change Password?</p>
-              <div className="col-sm-6">
+              <div className="col-sm-12">
+                <div></div>
                 <input
                   type="password"
                   placeholder="Current Password"
                   name="current_password"
                   className="form__name"
+                  style={{ width: "280px" }}
                 />
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-12">
                 <input
                   type="password"
                   placeholder="New Password"
                   name="pass1"
                   className="form__mail"
+                  style={{ width: "280px" }}
                 />
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-12">
                 <input
                   type="password"
-                  placeholder="New Password"
+                  placeholder="Repeat New Password"
                   name="pass2"
                   className="form__mail"
+                  style={{ width: "280px" }}
                 />
               </div>
               <button type="submit" className="btn btn-md btn--danger">
