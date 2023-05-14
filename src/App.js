@@ -11,6 +11,7 @@ import Pay from "./Pay";
 import PaySuccess from "./PaySuccess";
 import UserProfile from "./UserProfile";
 import Rates from "./Rates";
+import Movies from "./Movies";
 
 function App() {
   const apiHost = process.env.REACT_APP_API_HOST;
@@ -60,6 +61,17 @@ function App() {
                 <Menu staticUri={staticUri} host={apiHost} />
                 <SearchBar />
                 <Rates staticUri={staticUri} host={apiHost} />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path={"/movies"}
+            element={
+              <>
+                <Menu staticUri={staticUri} host={apiHost} />
+                <SearchBar />
+                <Movies staticUri={staticUri} host={apiHost} />
                 <Footer />
               </>
             }

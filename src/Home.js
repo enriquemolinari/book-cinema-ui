@@ -55,7 +55,21 @@ export default function Home(props) {
           <div className="movie movie--test movie--test--dark movie--test--left">
             <div className="movie__images">
               <a href="movie-page-left.html" className="movie-beta__link">
-                <img alt src={props.staticUri + p.movie.coverImg + ".jpeg"} />
+                {/*                 <img alt src={props.staticUri + p.movie.coverImg + ".jpeg"} /> */}
+                <div className="movie-poster-home darkblue">
+                  <div className="movie-title">{p.movie.name}</div>
+                  <div className="movie-release-date">
+                    {p.movie.genres.map((g, ind, arr) => (
+                      <>
+                        <span key={ind} href="#">
+                          {g}
+                        </span>
+                        {ind < arr.length - 1 ? " | " : ""}
+                      </>
+                    ))}
+                  </div>
+                  {/* <img alt src="images/movie/movie-sample1.jpg" /> */}
+                </div>
               </a>
             </div>
             <div className="movie__info">

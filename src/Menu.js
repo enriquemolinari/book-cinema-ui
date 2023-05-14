@@ -36,15 +36,21 @@ export default function Menu(props) {
             </li>
             <li>
               <span className="sub-nav-toggle plus" />
-              <a href="page-elements.html">Movies</a>
+              <a href="#index" onClick={() => navigate("/movies")}>
+                Movies
+              </a>
             </li>
             <li>
               <span className="sub-nav-toggle plus" />
-              <a href="page-elements.html">Rates</a>
+              <a href="#" onClick={() => navigate("/rates")}>
+                Rates
+              </a>
             </li>
             <li>
               <span className="sub-nav-toggle plus" />
-              <a href="page-elements.html">Help</a>
+              <a href="#index" onClick={() => navigate("/")}>
+                Help
+              </a>
             </li>
           </ul>
         </nav>
